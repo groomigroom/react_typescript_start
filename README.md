@@ -1,3 +1,5 @@
+npx create-react-app . --template typescript로 타입스크립스 리액트 프로젝트 만들기
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
