@@ -20,6 +20,11 @@ json
 
 #####
 
+npm install -g serve
+serve -s build의 의미?
+
+#####
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
