@@ -23,6 +23,30 @@ json
 npm install -g serve
 serve -s build의 의미?
 
+이 명령어는 리액트 프로젝트를 실제 서비스 환경(Production)과 유사하게 로컬에서 실행해보기 위해 사용하는 명령어입니다.
+보통 npm run build를 통해 생성된 결과물을 확인하기 위해 사용하며, 크게 두 부분으로 나뉩니다.
+1. npm install -g serve
+의미: serve라는 패키지를 전역(-g, global)으로 설치합니다.
+역할: serve는 정적 파일(HTML, CSS, JS 등)을 웹 서버로 띄워주는 간단하고 강력한 도구입니다. 
+
+2. serve -s build
+의미: build 폴더의 내용을 서버로 실행하되, 싱글 페이지 애플리케이션(SPA) 설정을 적용합니다.
+옵션 상세:
+build: 리액트에서 npm run build를 실행하면 생성되는 폴더 이름입니다. 최적화된 배포용 파일들이 들어있습니다.
+-s (Single-page helper): 리액트와 같은 SPA에서 경로를 이동(Routing)할 때, 브라우저가 특정 주소를 찾지 못하면 다시 index.html로 연결해주는 옵션입니다. 
+왜 사용하나요?
+리액트 개발 중에는 npm start를 쓰지만, 이는 개발 편의를 위한 서버일 뿐입니다. 실제로 사용자에게 서비스할 때는 빌드된 파일이 정상적으로 작동하는지 확인해야 하는데, 이때 가장 간편하게 서버를 띄워주는 방법이 이 명령어입니다. 
+더 궁금하신 점이나 빌드 과정에서 발생한 오류가 있으신가요?
+
+
+
+결론부터 말씀드리면, GitHub Pages로 배포할 때는 serve 명령어가 전혀 필요하지 않습니다.
+그 이유는 serve와 GitHub Pages의 역할이 다르기 때문입니다.
+1. serve가 필요 없는 이유
+serve: 내 컴퓨터(Local)를 임시 서버로 만들어 빌드된 파일을 확인하는 도구입니다.
+GitHub Pages: GitHub에서 제공하는 실제 웹 호스팅 서비스입니다.
+GitHub Pages 자체가 서버 역할을 수행하므로, 별도의 서버 실행 도구인 serve를 설치하거나 실행할 필요가 없습니다.
+
 #####
 
 # Getting Started with Create React App
