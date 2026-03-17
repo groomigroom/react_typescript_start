@@ -10,3 +10,6 @@ export const makeRelativeDate = (date: Date) =>
     DateTime.fromJSDate(date).startOf('day').toRelative();
 export const randomRelativeDate = () => makeRelativeDate(makeRandomPastDate());
 
+export const makeDayMonthYear = (date: Date) =>
+    DateTime.fromJSDate(date).toLocaleString(DateTime.DATE_FULL);
+export const randomDayMonthYear = () => makeDayMonthYear(makeRandomPastDate());
